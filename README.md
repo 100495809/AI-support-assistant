@@ -64,14 +64,13 @@ python src/main.py
 
 ### Example Output ###
 
- #### Classification Results ####
+#### Classification Results ####
+message                                         category           sentiment
+Hi, can you tell me the status of shipment...  Shipment Status     Neutral
+My delivery arrived late and the box was...    Delivery Issue      Negative
+Everything went smoothly today, thank you!     Other               Positive
 
-**message**                                    **category**       **sentiment**
-Hi, can you tell me the status of shipment...  Shipment Status    Neutral
-My delivery arrived late and the box was...    Delivery Issue     Negative
-Everything went smoothly today, thank you!     Other              Positive
-
- #### Category Counts #### 
+#### Category Counts ####
 Delivery Issue       4
 Shipment Status      3
 Payment / Invoice    2
