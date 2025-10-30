@@ -30,7 +30,7 @@ The system automatically processes each message and assigns it to a category, wh
 
 #### ai-support-assistant/ ####
 - **data/**
-  - `messages.csv` → Example input messages
+  - `messages.csv` → Input messages
 
 - **src/**
   - `main.py` 
@@ -39,9 +39,13 @@ The system automatically processes each message and assigns it to a category, wh
   - `display.py` ==> Output formatting  
   - `utils.py` ==> CSV reading 
 
-- `requirements.txt` → Project dependencies  
-- `Dockerfile` → Containerization setup  
-- `README.md` → Project documentation
+- **.github/**  
+  - **workflows/** 
+    - `run.yaml` ==> GitHub Actions workflow for automatically running the project
+
+- `requirements.txt` ==> Dependencies  
+- `Dockerfile` ==> Containerization setup  
+- `README.md` ==> Project documentation
 
 ---
 ## How to Run the Project
@@ -65,12 +69,13 @@ python src/main.py
 ### Example Output ###
 
 #### Classification Results ####
+```text
 message                                         category           sentiment
 Hi, can you tell me the status of shipment...  Shipment Status     Neutral
 My delivery arrived late and the box was...    Delivery Issue      Negative
 Everything went smoothly today, thank you!     Other               Positive
 
-#### Category Counts ####
+Category Counts
 Delivery Issue       4
 Shipment Status      3
 Payment / Invoice    2
@@ -78,7 +83,7 @@ Other                1
 
 ---
 ## Run with Docker ##
-If you prefer, you can run the project inside a Docker container.
+If you prefer, you can run the project inside a Docker container
 
 ### Build the image ###
 docker build -t ai-support-assistant .
@@ -105,6 +110,6 @@ Possible Improvements
 
 If I had more time, I would:
 
-Replace keyword-based classification with a machine learning classifier trained on labeled data.
+  - Replace keyword-based classification with a machine learning classifier trained on labeled data
 
-Add multilingual sentiment analysis for Spanish or other languages.
+  - Add multilingual sentiment analysis for Spanish or other languages
