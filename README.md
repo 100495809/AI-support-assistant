@@ -77,6 +77,16 @@ Payment / Invoice    2
 Other                1
 
 ---
+## Run with Docker ##
+If you prefer, you can run the project inside a Docker container.
+
+### Build the image ###
+docker build -t ai-support-assistant .
+
+### Run the container ###
+docker run --rm ai-support-assistant
+
+---
 ## Details ##
 
 Programming Language: 
@@ -88,3 +98,13 @@ Libraries Used:
     - transformers – for loading the Hugging Face sentiment model
     
     - torch – used by the model
+
+--- 
+## Possible Improvements ##
+Possible Improvements
+
+If I had more time, I would:
+
+Replace keyword-based classification with a machine learning classifier trained on labeled data.
+
+Add multilingual sentiment analysis for Spanish or other languages.
