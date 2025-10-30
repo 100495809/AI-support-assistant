@@ -3,14 +3,14 @@
 The goal was to design and implement a simple **AI-powered support assistant** that can automatically classify customer messages and analyze their sentiment using Natural Language Processing (NLP)
 
 ---
-Overview
+## Overview ##
 
 The use case simulates a logistics company that receives daily messages from drivers and clients.  
 These messages typically involve questions about shipment status, delivery issues, or payment and invoice problems.  
 The system automatically processes each message and assigns it to a category, while also detecting the sentiment (positive, negative, or neutral)
 
 ---
-Features
+## Features ##
 
 - **Message Classification:**  
   Categorizes messages into one of three groups:
@@ -26,60 +26,58 @@ Features
   as well as a count of how many messages fall into each category
 
 ---
-Project Structure
+## Project Structure ##
 
-ai-support-assistant/
-|
-|-- data/
-| -- messages.csv # Input messages
-|
-|-- src/
-| -- main.py
-| -- classifier.py # Logic for message classification
-| -- sentiment.py # Hugging face sentiment analysis
-| -- display.py # Output formatting
-| -- utils.py # CSV reading
-| 
-|
-|--requirements.txt # Dependencies
-|-- Dockerfile # Containerization setup
-|-- README.md # Documentation
+#### ai-support-assistant/ ####
+- **data/**
+  - `messages.csv` → Example input messages
+
+- **src/**
+  - `main.py` 
+  - `classifier.py` ==> Logic for message classification  
+  - `sentiment.py` ==> Hugging face sentiment analysis  
+  - `display.py` ==> Output formatting  
+  - `utils.py` ==> CSV reading 
+
+- `requirements.txt` → Project dependencies  
+- `Dockerfile` → Containerization setup  
+- `README.md` → Project documentation
 
 ---
 ## How to Run the Project
 
-**Create and activate a virtual environment**
+#### Create and activate a virtual environment ####
 
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 
 
-**Install dependencies**
+#### Install dependencies ####
 
 pip install -r requirements.txt
 
 
-**Run the program**
+#### Run the program ####
 
 python src/main.py
 
 
-**Example Output**
+#### Example Output ####
 
-#### Classification Results ####
+ **Classification Results**
 message                                         category           sentiment
 Hi, can you tell me the status of shipment...  Shipment Status    Neutral
 My delivery arrived late and the box was...    Delivery Issue     Negative
 Everything went smoothly today, thank you!     Other              Positive
 
-#### Category Counts ####
+ **Category Counts** 
 Delivery Issue       4
 Shipment Status      3
 Payment / Invoice    2
 Other                1
 
 ---
-Details
+## Details ##
 
 Programming Language: 
 Python
