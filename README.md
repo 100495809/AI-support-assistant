@@ -80,7 +80,7 @@ Delivery Issue       4
 Shipment Status      3
 Payment / Invoice    2
 Other                1
-
+```
 ---
 ## Run with Docker ##
 If you prefer, you can run the project inside a Docker container
