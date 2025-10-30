@@ -46,31 +46,32 @@ The system automatically processes each message and assigns it to a category, wh
 ---
 ## How to Run the Project
 
-#### Create and activate a virtual environment ####
+### Create and activate a virtual environment ###
 
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 
 
-#### Install dependencies ####
+### Install dependencies ###
 
 pip install -r requirements.txt
 
 
-#### Run the program ####
+### Run the program ###
 
 python src/main.py
 
 
-#### Example Output ####
+### Example Output ###
 
- **Classification Results**
-message                                         category           sentiment
+ #### Classification Results ####
+
+**message**                                    **category**       **sentiment**
 Hi, can you tell me the status of shipment...  Shipment Status    Neutral
 My delivery arrived late and the box was...    Delivery Issue     Negative
 Everything went smoothly today, thank you!     Other              Positive
 
- **Category Counts** 
+ #### Category Counts #### 
 Delivery Issue       4
 Shipment Status      3
 Payment / Invoice    2
